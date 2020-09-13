@@ -26,4 +26,7 @@ jobs:
       run: |
         gradle wrapper
         ./gradlew build
+    - name: buildImage
+      run: |
+        docker build -t restful-stack:latest . 
         
