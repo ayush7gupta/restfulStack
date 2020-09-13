@@ -14,7 +14,7 @@ It supports the following operations related to stacks:
 # Steps to run the project and see the ui
 
 1. Clone the repository
-1. Go the repository location and run command: ./gradlew bootRun
+1. Go the repository location and run command: ```./gradlew bootRun ```
 1. Open the browser and visit http://localhost:8081
 
 Now we are good to go and all the operations can be performed.
