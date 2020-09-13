@@ -17,7 +17,7 @@ plugins {
 }
 
 group 'org.example'
-version '1.0-SNAPSHOT'
+version '1.0'
 
 repositories {
     mavenCentral()
@@ -34,7 +34,7 @@ apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-def appName = 'restfulStack'
+def appName = 'restful-stack'
 group = 'com.datastructures'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
