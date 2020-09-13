@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<head>
+    <title>Spring Boot ajax example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="stylesheet" type="text/css"
+          href="webjars/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <style>
+body {
+    background-image: url("img/bg2.jpg");
+    background-repeat: repeat-x;
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <h1>Stack Crud operations using Spring Boot</h1>
+        </div>
+    </div>
+</nav>
+
+    <div class="starter-template">
+
+        <div id="feedback"></div>
+
+        <form class="form-horizontal" id="create-form">
+            <div class="form-group form-group-lg">
+                <label class="col-sm-2 control-label">Enter size of Stack:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="create"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" id="bth-create"
+                            class="btn btn-success btn-lg">Create!!
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <form class="form-horizontal" id="push-form">
+            <div class="form-group form-group-lg">
+                <label class="col-sm-4 control-label">Element to push:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="push"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" id="bth-push"
+                            class="btn btn-info btn-lg">Push Element
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div class="col-sm-10">
+        <button type="button" class="btn btn-warning btn-lg" id = "pop-button">Pop Element</button>
+        <button type="button" class="btn btn-primary btn-lg" id = "peek-button">Peek Top Element</button>
+            <button type="button" class="btn btn-danger btn-lg" id = "reset-button">Reset Stack !!!!</button>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript"
+        src="webjars/jquery/3.4.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>
