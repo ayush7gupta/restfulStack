@@ -23,11 +23,6 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    //classpath 'com.netflix.nebula:gradle-ospackage-plugin:2.2.6'
-    //classpath 'no.entitas.gradle.jaxb:gradle-jaxb-plugin:2.0'
-    //classpath "org.springframework.boot:spring-boot-gradle-plugin:2.1.1.RELEASE"
-}
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'java'
@@ -41,7 +36,7 @@ targetCompatibility = 1.8
 dependencies {
     compile("org.projectlombok:lombok:$LOMBOK_VERSION")
 
-       testCompile(group: "org.powermock",name: "powermock-api-mockito", version: "$POWER_MOCKITO_VERSION"){
+       testCompile(group: "org.powermock",name: "powermock-api-mockito2", version: "$POWER_MOCKITO_VERSION"){
         exclude group: 'org.log4j'
     }
     testCompile (group: 'junit', name: 'junit', version: "$JUNIT_VERSION")
