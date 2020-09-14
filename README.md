@@ -14,6 +14,7 @@ It supports the following operations related to stacks:
 # Steps to run the project and see the ui
 
 1. Clone the repository
+1. To build use the command ```./gradlew build```
 1. Go the repository location and run command: ```./gradlew bootRun ```
 1. Open the browser and visit http://localhost:8081
 
@@ -24,5 +25,5 @@ The reult of all the operation is an object consisting of a message and the curr
 The project supports project build and docker build whenever there is a push or a pull request to master.
 
 # Test Cases
-The project consist of **unit test cases** that will be trigerred with gradle build command: ``` ./gradlew build```
+The project consist of **unit test cases**  and **End to End Integration tests** that will be trigerred with gradle build command: ``` ./gradlew build```
 
