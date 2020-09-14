@@ -4,7 +4,7 @@ import org.hibernate.validator.constraints.NotBlank;
 
 public class InputCriteria {
 
-    @NotBlank(message = "username can't empty!")
+    @NotBlank(message = "input can't empty!")
     String num;
 
     public String getNum() {

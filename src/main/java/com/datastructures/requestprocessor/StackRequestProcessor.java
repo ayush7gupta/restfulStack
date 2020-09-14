@@ -4,6 +4,8 @@ import com.datastructures.models.imp.Stacks;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import static com.datastructures.utils.StackConst.*;
+
 @Component
 public class StackRequestProcessor {
 
@@ -13,42 +15,42 @@ public class StackRequestProcessor {
     public String createStack(int size){
         int resp = stacks.createDataStructure(size);
         if(resp == Integer.MIN_VALUE){
-            return "Size of stack cannot be <=0";
+            return CREATION_FAIL;
         }
-        return "Created stack of size " + size;
+        return CREATION_SUCCESS_SIZE + size;
     }
 
     public String push(int num){
         int resp = stacks.push(num);
         if(resp == Integer.MIN_VALUE){
-            return "Stack is not initialized.";
+            return STACK_NOT_INITIALIZED;
         }
         else if(resp == Integer.MIN_VALUE+1){
-            return "Stack is full. Cannot insert element.";
+            return STACK_FULL_PUSH_ERROR;
         }
-        return "added " + num + " to the stack.";
+        return ELEMENT_ADDED + num;
     }
 
     public String pop(){
         int resp = stacks.pop();
         if(resp == Integer.MIN_VALUE){
-            return "Stack is not initiated.";
+            return STACK_NOT_INITIALIZED;
         }
         else if(resp == Integer.MIN_VALUE+1){
-            return "Stack is empty.";
+            return STACK_IS_EMPTY;
         }
-        return "The popped element is: " + resp;
+        return POPPED_ELEMENT_IS + resp;
     }
 
     public String peek(){
         int resp = stacks.peek();
         if(resp == Integer.MIN_VALUE){
-            return "Stack has not been initiated.";
+            return STACK_NOT_INITIALIZED;
         }
         else if (resp == Integer.MIN_VALUE+1){
-            return "Stack is empty.";
+            return STACK_IS_EMPTY;
         }
-        return "the top most element is: " + resp;
+        return THE_TOPMOST_ELEMENT_IS + resp;
     }
 
     public int[] getAllElements(){
@@ -58,8 +60,8 @@ public class StackRequestProcessor {
     public String reset(){
         boolean resp = stacks.reset();
         if (!resp){
-            return "Stack not Initialized";
+            return STACK_NOT_INITIALIZED;
         }
-        return "Stack reset, new size is 0";
+        return STACK_RESET;
     }
 }
