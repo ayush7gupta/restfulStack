@@ -18,11 +18,11 @@ It supports the following operations related to stacks:
 1. Open the browser and visit http://localhost:8081
 
 Now we are good to go and all the operations can be performed.
-The reult of all the operation is an object consisting of a message and the current state of stack(display all teh integers in it).
+The reult of all the operation is an object consisting of a message and the current state of stack(display all the integers in it).
 
 # Github Actions
 The project supports project build and docker build whenever there is a push or a pull request to master.
 
 # Test Cases
-The project consist of unit test cases that will be trigerred with gradle build.
+The project consist of **unit test cases** that will be trigerred with gradle build command: ``` ./gradlew build```
 
